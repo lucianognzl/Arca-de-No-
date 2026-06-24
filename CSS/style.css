@@ -1,204 +1,286 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-header{
-    width:100%;
-    height:100px;
-    background:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 40px;
+body {
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-/* Logo */
-.img_logo{
-    height:100%;
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.img_logo img{
-    height:100%;
-    display:block;
+h2 {
+    font-size: 22px;
+    color: #ff7a00; 
+    margin: 30px 0 20px 0;
 }
 
-/* Pesquisa */
-form{
-    display:flex;
-    width:500px;
-}
-
-form input{
-    width:100%;
-    height:45px;
-    border:2px solid #ff7a00;
-    border-right:none;
-    border-radius:25px 0 0 25px;
-    padding:0 15px;
-    font-size:16px;
-}
-
-form button{
-    width:60px;
-    border:none;
-    background:#ff7a00;
-    color:white;
-    font-size:18px;
-    border-radius:0 25px 25px 0;
-    cursor:pointer;
-}
-
-/* Ícones */
-header > a{
-    text-decoration:none;
-    color:#444;
-    font-size:24px;
-    width:45px;
-    height:45px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    transition:.3s;
-}
-
-header > a:hover{
-    color:#ff7a00;
-    background:#fff3eb;
-}
-
-/* Entrar / Cadastrar */
-.entrar_cadastrar{
-    display:flex;
-    gap:10px;
-}
-
-.entrar_cadastrar a{
-    text-decoration:none;
-    font-weight:bold;
-    padding:10px 20px;
-    border-radius:25px;
-    transition:.3s;
-}
-
-.entrar_cadastrar a:first-child{
-    color:#ff7a00;
-    border:2px solid #ff7a00;
-}
-
-.entrar_cadastrar a:last-child{
-    background:#ff7a00;
-    color:white;
-}
-
-.entrar_cadastrar a:hover{
-    transform:translateY(-2px);
-}
-
-
-.cards_de_preços{
-    display: flex;
-    justify-content: space-around;
-}
-
-/* *********NAV************* */
-nav{
-    width:100%;
-    background:#ff7a00;
-    height:55px;
-}
-
-.menu{
-    list-style:none;
-    height:100%;
-    display:flex;
-    justify-content: space-evenly;
-    align-items:center;
-    gap:40px;
-}
-
-.menu_breadcombe{
-    list-style:none;
-    height:100%;
-    display:flex;
-    justify-content: left;
-    align-items:center;
-    gap:40px;
-}
-
-.item_menu a{
-    text-decoration:none;
-    color:rgb(8, 8, 8);
-    font-size:16px;
-    font-weight:600;
-    padding:18px 10px;
-    display:block;
-    transition:.3s;
-}
-
-.item_menu a:hover{
-    background:rgba(255,255,255,0.15);
-}
-
-/* ********NAV INFO************ */
-
-.nav_info{
-    width:100%;
-    padding:15px 40px;
-    background:#f8f8f8;
-    border-bottom:1px solid #e5e5e5;
-}
-
-.nav_info .menu{
-    list-style:none;
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.nav_info .item_menu{
-    font-size:14px;
-    color:#666;
-}
-
-.nav_info .item_menu:first-child{
-    color:#ff7a00;
-    font-weight:600;
-    cursor:pointer;
-}
-
-.nav_info .item_menu:nth-child(2){
-    color:#999;
-}
-
-
-/* **************BOTOES ESTILOSOS********************** */
-.botoes_estilosos{
+/* ==========================================================================
+   HEADER / TOPO
+   ========================================================================== */
+header {
     width: 100%;
-    display:flex;
-    gap:20px;
-    justify-content:space-between;
-    margin:40px 0;
-    
+    height: 100px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-bottom: 1px solid #eee;
 }
 
-.botao_estiloso{
-    text-decoration:none;
-    color:#444;
-    background:#fff;
-    border:2px solid #ff7a00;
-    border-radius:50px;
-    padding:14px 28px;
-    font-weight:600;
-    transition:.3s;
-    box-shadow:0 3px 8px rgba(0,0,0,0.08);
+.img_logo {
+    height: 100%;
 }
 
-.botao_estiloso:hover{
-    background:#ff7a00;
-    color:white;
-    transform:translateY(-4px);
-    box-shadow:0 8px 20px rgba(255,122,0,.35);
+.img_logo img {
+    height: 80px;
+    margin-top: 20px;
+}
+
+/* Barra de Pesquisa */
+form {
+    display: flex;
+    width: 450px;
+}
+
+form input {
+    width: 100%;
+    height: 42px;
+    border: 2px solid #ff7a00;
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+    padding: 0 15px;
+    font-size: 15px;
+}
+
+form button {
+    width: 55px;
+    border: none;
+    background: #ff7a00;
+    color: white;
+    font-size: 16px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+/* Ícones do Topo */
+header > a {
+    text-decoration: none;
+    color: #555;
+    font-size: 22px;
+    transition: color 0.2s;
+}
+
+header > a:hover {
+    color: #ff7a00;
+}
+
+/* Botões Entrar / Cadastrar */
+.entrar_cadastrar {
+    display: flex;
+    gap: 10px;
+}
+
+.entrar_cadastrar a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px 18px;
+    border-radius: 20px;
+}
+
+.entrar_cadastrar a:first-child {
+    color: #ff7a00;
+    border: 2px solid #ff7a00;
+}
+
+.entrar_cadastrar a:last-child {
+    background: #ff7a00;
+    color: white;
+}
+.entrar_cadastrar a:hover{
+    transform: translateY(-2px);
+
+}
+
+/* ==========================================================================
+   NAVEGAÇÃO E BREADCRUMB
+   ========================================================================== */
+nav {
+    width: 100%;
+    background: #ff7a00;
+    height: 50px;
+}
+
+.menu {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.item_menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 15px;
+    display: block;
+}
+
+.item_menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* Breadcrumb (Caminho de navegação) */
+.nav_info {
+    width: 100%;
+    padding: 12px 40px;
+    background: #f0f0f0;
+}
+
+.menu_breadcombe {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.menu_breadcombe .item_menu {
+    font-size: 13px;
+    color: #666;
+}
+
+.menu_breadcombe .item_menu:first-child {
+    color: #ff7a00;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   BOTÕES DE SERVIÇOS
+   ========================================================================== */
+.botoes_estilosos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.botao_estiloso {
+    text-decoration: none;
+    color: #555;
+    background: #fff;
+    border: 2px solid #ff7a00;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.botao_estiloso:hover {
+    background: #ff7a00;
+    color: white;
+}
+
+/* ==========================================================================
+   CARDS DE PRODUTOS E INTEGRAÇÃO BOOTSTRAP
+   ========================================================================== */
+.cards_de_preços {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Customização simplificada dos cards do Bootstrap */
+.card {
+    border: 1px solid #ddd !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+    background: #fff;
+}
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff7a00; /* Preço em destaque com a cor da marca */
+}
+
+/* Mantém os títulos das seções informativas escuros */
+.row .card-title {
+    color: #333;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #666;
+    height: 84px;
+}
+
+/* Forçando os botões do Bootstrap a seguirem o padrão do site */
+.btn-primary {
+    background-color: #ff7a00 !important;
+    border-color: #ff7a00 !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #d66700 !important;
+    border-color: #d66700 !important;
+}
+
+/* Ajuste simples do Carrossel */
+.carousel {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carousel-caption a {
+    background: #ff7a00;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   FOOTER / RODAPÉ
+   ========================================================================== */
+footer {
+    width: 100%;
+    background: #333;
+    padding: 20px 0;
+    margin-top: 50px;
+    text-align: center;
+}
+
+footer p {
+    color: #bbb;
+    font-size: 13px;
 }
