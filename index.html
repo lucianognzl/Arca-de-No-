@@ -30,10 +30,12 @@
         </form>
 
         <!-- ICONES -->
-        <a href=""><i class="fa-solid fa-heart"></i></a>
-        <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
-        <a href=""><i class="fa-solid fa-user"></i></a>
-        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+        <a class="item"><i class="fa-solid fa-heart"></i></a>
+        <a class="item" href=""><i class="fa-solid fa-bag-shopping"></i></a>
+        <a class="item" href=""><i class="fa-solid fa-user"></i></a>
+        <a class="item" href=""><i class="fa-brands fa-whatsapp"></i></a>
+
+        <!-- fa-heart fa-bag-shopping fa-user fa-whatsapp"-->
 
         <!-- ENTRAR/CADASTRAR -->
         <div class="entrar_cadastrar">
@@ -43,8 +45,14 @@
 
     </header>
     <nav>
+        <!-- HAMBURGUER -->
+        <div class="hamburguer" id="btnmenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <!-- MENUS DE TEXTOS SIMPLES -->
-        <ul class="menu">
+        <ul class="menu" id="menu">
             <li class="item_menu"><a href="">Cães</a></li>
             <li class="item_menu"><a href="">Gatos</a></li>
             <li class="item_menu"><a href="">Pássaros</a></li>
@@ -179,6 +187,15 @@
     <footer>
         <p>Todos os direitos reservados</p>
     </footer>
+    <script>
+        let btn_menu = document.getElementById('btnmenu');
+        let menu = document.getElementById('menu');
+
+        btn_menu.addEventListener('click', ()=>{
+            console.log("Usuário clicou no btn menu");
+            menu.classList.toggle('ativo')
+        })
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
